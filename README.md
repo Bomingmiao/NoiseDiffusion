@@ -20,9 +20,21 @@ pip install -r requirements.txt
 ### Demo
 Stable Diffusion models can be downloaded from Hugging Face automatically. Run the following command to generate images.
 ```bash
-python run.py 
+python run.py \
+--prompt "a book on the sofa" \
+--seed 33 \
+--sd_version "CompVis/stable-diffusion-v1-4" \
+--vqa_model "clip-flant5-xxl" \
+--num_candidate_noises 50 \
+--num_denoising_steps 50 \
+--max_epoch 50 \
+--device "cuda:0" \
+--result_root "results"
 ```
-You can specify the prompt, seed, Stable Diffusion model, and large vision-language model in `run.py`.
+You can customize the arguments according to your specific settings. For detailed supports of the arguments:
+```bash
+python evaluate.py -h
+```
 
 ### Datasets
 To reproduce the quantitative results, you can run the script on the datasets:
