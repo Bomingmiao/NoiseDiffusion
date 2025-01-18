@@ -51,6 +51,6 @@ If you find this repository useful, please cite our paper:
   year={2024}
 }
 ```
-
+We would really appreciate it if you could give a star to this repository.
 ## Acknowledgements
 Special thanks to the [t2v_metrics](https://github.com/linzhiqiu/t2v_metrics) repository for providing the base large vision-language models used in our project.
