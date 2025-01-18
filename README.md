@@ -44,15 +44,12 @@ To reproduce the quantitative results, you can run the script on the datasets:
 ## Citation
 If you find this repository useful, please cite our paper:
 ```
-@misc{miao2024noisediffusionenhancingsemantic,
-      title={Noise Diffusion for Enhancing Semantic Faithfulness in Text-to-Image Synthesis}, 
-      author={Boming Miao and Chunxiao Li and Xiaoxiao Wang and Andi Zhang and Rui Sun and Zizhe Wang and Yao Zhu},
-      year={2024},
-      eprint={2411.16503},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2411.16503}, 
-}  
+@article{miao2024noise,
+  title={Noise Diffusion for Enhancing Semantic Faithfulness in Text-to-Image Synthesis},
+  author={Miao, Boming and Li, Chunxiao and Wang, Xiaoxiao and Zhang, Andi and Sun, Rui and Wang, Zizhe and Zhu, Yao},
+  journal={arXiv preprint arXiv:2411.16503},
+  year={2024}
+}
 ```
 
 ## Acknowledgements
