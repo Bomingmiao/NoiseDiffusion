@@ -1,4 +1,4 @@
-# Noise Diffusion for Enhancing Faithfulness in Text-to-Image Synthesis
+# Noise Diffusion for Enhancing Semantic Faithfulness in Text-to-Image Synthesis (CVPR 2025)
 Official PyTorch code release for the paper: https://arxiv.org/abs/2411.16503
 ![](assets/demo.jpg)
 
@@ -20,21 +20,12 @@ pip install -r requirements.txt
 ### Demo
 Stable Diffusion models can be downloaded from Hugging Face automatically. Run the following command to generate images.
 ```bash
-python run.py \
---prompt "a book on the sofa" \
---seed 33 \
---sd_version "CompVis/stable-diffusion-v1-4" \
---vqa_model "clip-flant5-xxl" \
---num_candidate_noises 50 \
---num_denoising_steps 50 \
---max_epoch 50 \
---device "cuda:0" \
---result_root "results"
+python run_sd.py 
 ```
-You can customize the arguments according to your specific settings. For detailed supports of the arguments:
+For more advanced diffusion models such as Stable Diffusion 3, run the following command:
 ```bash
-python evaluate.py -h
-```
+python run_sd3.py
+````
 
 ### Datasets
 To reproduce the quantitative results, you can run the script on the datasets:
