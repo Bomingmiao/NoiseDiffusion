@@ -35,11 +35,12 @@ To reproduce the quantitative results, you can run the script on the datasets:
 ## Citation
 If you find this repository useful, please cite our paper:
 ```
-@article{miao2024noise,
+@inproceedings{miao2025noise,
   title={Noise Diffusion for Enhancing Semantic Faithfulness in Text-to-Image Synthesis},
   author={Miao, Boming and Li, Chunxiao and Wang, Xiaoxiao and Zhang, Andi and Sun, Rui and Wang, Zizhe and Zhu, Yao},
-  journal={arXiv preprint arXiv:2411.16503},
-  year={2024}
+  booktitle={Proceedings of the Computer Vision and Pattern Recognition Conference},
+  pages={23575--23584},
+  year={2025}
 }
 ```
 We would really appreciate it if you could give a star to this repository.
