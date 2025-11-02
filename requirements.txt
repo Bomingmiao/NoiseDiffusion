@@ -15,6 +15,7 @@ pandas>=2.1.4
 scipy>=1.11.4
 sentencepiece>=0.1.99
 transformers==4.36.1
+diffusers
 datasets>=2.15.0
 tokenizers
 omegaconf
