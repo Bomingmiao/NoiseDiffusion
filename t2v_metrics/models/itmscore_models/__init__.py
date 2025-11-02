@@ -1,12 +1,12 @@
 from .blip2_itm_model import BLIP2_ITM_MODELS, BLIP2ITMScoreModel
-from .umt_itm_model import UMT_ITM_MODELS, UMTITMScoreModel
-from .internvideo2_itm_model import INTERNVIDEO2_ITM_MODELS, InternVideo2ITMScoreModel
+#from .umt_itm_model import UMT_ITM_MODELS, UMTITMScoreModel
+#from .internvideo2_itm_model import INTERNVIDEO2_ITM_MODELS, InternVideo2ITMScoreModel
 from ...constants import HF_CACHE_DIR
 
 ALL_ITM_MODELS = [
     BLIP2_ITM_MODELS,
-    UMT_ITM_MODELS,
-    INTERNVIDEO2_ITM_MODELS,
+    #UMT_ITM_MODELS,
+    #INTERNVIDEO2_ITM_MODELS,
 ]
 
 def list_all_itmscore_models():

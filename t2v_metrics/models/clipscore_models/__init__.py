@@ -2,9 +2,9 @@ from .clip_model import CLIP_MODELS, CLIPScoreModel
 from .blip2_itc_model import BLIP2_ITC_MODELS, BLIP2ITCScoreModel
 from .hpsv2_model import HPSV2_MODELS, HPSV2ScoreModel
 from .pickscore_model import PICKSCORE_MODELS, PickScoreModel
-from .umt_clip_model import UMT_CLIP_MODELS, UMTCLIPScoreModel
-from .internvideo2_clip_model import INTERNVIDEO2_CLIP_MODELS, InternVideo2CLIPScoreModel
-from .languagebind_video_clip_model import LANGUAGEBIND_VIDEO_CLIP_MODELS, LanguageBindVideoCLIPScoreModel
+#from .umt_clip_model import UMT_CLIP_MODELS, UMTCLIPScoreModel
+#from .internvideo2_clip_model import INTERNVIDEO2_CLIP_MODELS, InternVideo2CLIPScoreModel
+#from .languagebind_video_clip_model import LANGUAGEBIND_VIDEO_CLIP_MODELS, LanguageBindVideoCLIPScoreModel
 from ...constants import HF_CACHE_DIR
 
 ALL_CLIP_MODELS = [
@@ -12,9 +12,9 @@ ALL_CLIP_MODELS = [
     BLIP2_ITC_MODELS,
     HPSV2_MODELS,
     PICKSCORE_MODELS,
-    UMT_CLIP_MODELS,
-    INTERNVIDEO2_CLIP_MODELS,
-    LANGUAGEBIND_VIDEO_CLIP_MODELS,
+    #UMT_CLIP_MODELS,
+    #INTERNVIDEO2_CLIP_MODELS,
+    #LANGUAGEBIND_VIDEO_CLIP_MODELS,
 ]
 
 def list_all_clipscore_models():
