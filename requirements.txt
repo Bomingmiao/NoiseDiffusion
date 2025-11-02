@@ -23,7 +23,6 @@ fairscale
 # for clipscore
 scikit-learn
 pycocoevalcap
-image-reward
 hpsv2
 fire==0.4.0
 tiktoken>=0.7.0
