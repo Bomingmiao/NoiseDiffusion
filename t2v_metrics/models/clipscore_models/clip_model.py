@@ -1,7 +1,6 @@
 from abc import abstractmethod
 from typing import List
 import torch
-import torchvision.transforms as transforms
 import open_clip
 
 from ..model import ScoreModel
@@ -11,11 +10,14 @@ CLIP_MODELS = [f"{pretrained}:{arch}" for arch, pretrained in open_clip.list_pre
 
 class CLIPScoreModel(ScoreModel):
     "A wrapper for OpenCLIP models (including openAI's CLIP, OpenCLIP, DatacompCLIP)"
+    video_mode = "concat"
+    allows_image = True
     def __init__(self,
                  model_name='openai:ViT-L-14',
                  device='cuda',
                  cache_dir=HF_CACHE_DIR):
         assert model_name in CLIP_MODELS
+        
         super().__init__(model_name=model_name,
                          device=device,
                          cache_dir=cache_dir)
@@ -30,10 +32,6 @@ class CLIPScoreModel(ScoreModel):
             device=self.device,
             cache_dir=self.cache_dir
         )
-        self.tensor_transform = transforms.Compose([
-            transform for transform in self.preprocess.transforms if
-            isinstance(transform, (transforms.Resize, transforms.CenterCrop, transforms.Normalize))
-        ])
         self.tokenizer = open_clip.get_tokenizer(self.arch)
         self.model.eval()
     
@@ -42,10 +40,7 @@ class CLIPScoreModel(ScoreModel):
         """Load the image(s), and return a tensor (after preprocessing) put on self.device
         """
         image = [self.image_loader(x) for x in image]
-        if isinstance(image[0], torch.Tensor):
-            image = [self.tensor_transform(img) for img in image]
-        else:
-            image = [self.preprocess(x) for x in image]
+        image = [self.preprocess(x) for x in image]
         image = torch.stack(image, dim=0).to(self.device)
         return image
     
