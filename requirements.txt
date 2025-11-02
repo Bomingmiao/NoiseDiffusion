@@ -1,5 +1,5 @@
-torch
-torchvision
+torch==2.1.0
+torchvision==0.16.0
 git+https://github.com/openai/CLIP.git
 ftfy>=6.1.1
 tqdm>=4.64.1
@@ -21,7 +21,6 @@ tokenizers
 omegaconf
 iopath
 fairscale
-# for clipscore
 scikit-learn
 pycocoevalcap
 hpsv2
